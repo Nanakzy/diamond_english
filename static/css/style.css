@@ -1,1 +1,593 @@
+:root {
+    --black: #101010;
+    --charcoal: #1b1b1b;
+    --ivory: #f7f4ed;
+    --white: #ffffff;
+    --gold: #c8a96b;
+    --gold-light: #e5d2a6;
+    --muted: #aaa69e;
+    --border: rgba(200, 169, 107, 0.24);
+}
 
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+}
+
+body {
+    font-family: "DM Sans", sans-serif;
+    background: var(--ivory);
+    color: var(--black);
+    line-height: 1.7;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button, input, select, textarea {
+    font: inherit;
+}
+
+button, a {
+    -webkit-tap-highlight-color: transparent;
+}
+
+.site-header {
+    min-height: 82px;
+    padding: 18px 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    background: var(--black);
+    color: var(--white);
+    border-bottom: 1px solid var(--border);
+}
+
+.brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.9rem;
+    font-weight: 700;
+    letter-spacing: 1.6px;
+    white-space: nowrap;
+}
+
+.brand-mark {
+    color: var(--gold);
+    font-size: 2rem;
+    line-height: 1;
+}
+
+.brand-light {
+    color: var(--gold-light);
+    font-weight: 400;
+}
+
+.main-nav {
+    display: flex;
+    align-items: center;
+    gap: 27px;
+    font-size: 0.88rem;
+}
+
+.main-nav > a:not(.nav-cta) {
+    color: #d2d0cb;
+    transition: color 0.2s;
+}
+
+.main-nav > a:hover {
+    color: var(--gold-light);
+}
+
+.nav-cta {
+    border: 1px solid var(--gold);
+    padding: 9px 15px;
+    border-radius: 4px;
+}
+
+.menu-toggle {
+    display: none;
+    background: transparent;
+    border: 1px solid var(--border);
+    color: var(--white);
+    padding: 7px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.hero {
+    min-height: 590px;
+    padding: 85px 9%;
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    align-items: center;
+    gap: 35px;
+    background:
+        radial-gradient(ellipse at 85% 45%, #30281b 0%, transparent 44%),
+        var(--black);
+    color: var(--white);
+    overflow: hidden;
+}
+
+.hero-content {
+    max-width: 670px;
+    position: relative;
+    z-index: 1;
+}
+
+.eyebrow {
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 2.5px;
+    color: #9b7c43;
+    margin-bottom: 18px;
+}
+
+.hero .eyebrow,
+.callout .eyebrow {
+    color: var(--gold);
+}
+
+h1, h2, h3 {
+    font-family: "Playfair Display", Georgia, serif;
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+h1 {
+    font-size: clamp(2.8rem, 5.2vw, 4.7rem);
+    letter-spacing: -1.8px;
+}
+
+h1 span, h2 span {
+    color: var(--gold);
+}
+
+.hero-description {
+    max-width: 540px;
+    color: #c6c3bc;
+    margin: 25px 0 30px;
+    font-size: 1rem;
+}
+
+.hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 13px;
+}
+
+.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    min-height: 48px;
+    padding: 12px 20px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.88rem;
+    font-weight: 600;
+    transition: transform 0.2s, background 0.2s;
+}
+
+.button:hover {
+    transform: translateY(-2px);
+}
+
+.button-gold {
+    background: var(--gold);
+    color: var(--black);
+}
+
+.button-gold:hover {
+    background: var(--gold-light);
+}
+
+.button-outline {
+    border-color: #777065;
+    color: var(--white);
+}
+
+.button-outline:hover {
+    border-color: var(--gold);
+}
+
+.hero-note {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-top: 35px;
+    color: #b9b5ac;
+    font-size: 0.85rem;
+}
+
+.note-diamond {
+    color: var(--gold);
+    font-size: 1.4rem;
+}
+
+.hero-art {
+    min-height: 350px;
+    position: relative;
+    display: grid;
+    place-items: center;
+}
+
+.diamond-shape {
+    position: relative;
+    z-index: 1;
+    color: var(--gold-light);
+    font-size: clamp(12rem, 24vw, 20rem);
+    line-height: 1;
+    text-shadow: 0 0 55px rgba(200, 169, 107, 0.2);
+}
+
+.diamond-glow {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background: rgba(200, 169, 107, 0.12);
+    filter: blur(70px);
+    border-radius: 50%;
+}
+
+.orbit {
+    position: absolute;
+    width: 290px;
+    height: 290px;
+    border: 1px solid rgba(200, 169, 107, 0.23);
+    border-radius: 50%;
+}
+
+.orbit-two {
+    width: 360px;
+    height: 360px;
+    border-style: dashed;
+    opacity: 0.6;
+}
+
+.art-caption {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--gold-light);
+    font-size: 0.65rem;
+    letter-spacing: 2px;
+}
+
+.caption-line {
+    width: 35px;
+    height: 1px;
+    background: var(--gold);
+}
+
+.section {
+    padding: 85px 9%;
+}
+
+.intro {
+    text-align: center;
+}
+
+.section h2,
+.callout h2,
+.contact h2 {
+    font-size: clamp(2.1rem, 4vw, 3.3rem);
+}
+
+.section-description {
+    max-width: 680px;
+    margin: 18px auto 0;
+    color: #6c6962;
+}
+
+.benefits {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+    margin-top: 55px;
+    text-align: left;
+}
+
+.benefit {
+    padding: 25px;
+    border-top: 2px solid var(--gold);
+    background: #fffdf9;
+}
+
+.benefit-number {
+    color: #a4864f;
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+}
+
+.benefit h3, .course-card h3 {
+    font-size: 1.35rem;
+    margin: 14px 0 10px;
+}
+
+.benefit p, .course-card p {
+    color: #6c6962;
+    font-size: 0.91rem;
+}
+
+.courses {
+    background: #eeeae1;
+    text-align: center;
+}
+
+.course-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px;
+    margin-top: 45px;
+    text-align: left;
+}
+
+.course-card {
+    padding: 30px;
+    background: var(--white);
+    border: 1px solid #e6dfd1;
+    border-radius: 5px;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.course-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.06);
+}
+
+.course-card.featured {
+    border-top: 3px solid var(--gold);
+}
+
+.course-icon {
+    color: #a4864f;
+    font-size: 1.8rem;
+}
+
+.course-label {
+    margin-top: 15px;
+    font-size: 0.67rem !important;
+    letter-spacing: 1.5px;
+    font-weight: 700;
+}
+
+.course-card a {
+    display: inline-block;
+    margin-top: 20px;
+    color: #87672f;
+    font-size: 0.87rem;
+    font-weight: 700;
+}
+
+.callout {
+    text-align: center;
+    background: var(--black);
+    color: var(--white);
+}
+
+.callout > p:not(.eyebrow):not(.small-note) {
+    margin: 20px 0 25px;
+    color: #c6c3bc;
+}
+
+.small-note {
+    margin-top: 18px;
+    color: var(--muted);
+    font-size: 0.78rem;
+}
+
+.contact {
+    max-width: 850px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.enquiry-form {
+    display: grid;
+    gap: 10px;
+    margin: 35px auto 0;
+    text-align: left;
+}
+
+.enquiry-form label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-top: 8px;
+}
+
+.enquiry-form input,
+.enquiry-form select,
+.enquiry-form textarea {
+    width: 100%;
+    padding: 13px 14px;
+    background: var(--white);
+    color: var(--black);
+    border: 1px solid #d9d3c8;
+    border-radius: 4px;
+    outline-offset: 2px;
+}
+
+.enquiry-form input:focus,
+.enquiry-form select:focus,
+.enquiry-form textarea:focus {
+    outline: 2px solid var(--gold);
+    border-color: transparent;
+}
+
+.enquiry-form .button {
+    margin-top: 12px;
+}
+
+.form-message {
+    color: #6d5528;
+    font-size: 0.9rem;
+}
+
+.site-footer {
+    padding: 35px 7%;
+    background: var(--black);
+    color: #c6c3bc;
+    text-align: center;
+    border-top: 1px solid var(--border);
+}
+
+.site-footer .brand {
+    color: var(--white);
+    justify-content: center;
+}
+
+.site-footer > p {
+    margin-top: 10px;
+    font-size: 0.85rem;
+}
+
+.copyright {
+    color: #8e8a82;
+}
+
+@media (max-width: 900px) {
+    .site-header {
+        padding: 17px 5%;
+    }
+
+    .main-nav {
+        gap: 15px;
+    }
+
+    .hero {
+        padding: 70px 6%;
+        grid-template-columns: 1fr 0.7fr;
+    }
+
+    .section {
+        padding: 70px 6%;
+    }
+
+    .diamond-shape {
+        font-size: 12rem;
+    }
+
+    .orbit {
+        width: 220px;
+        height: 220px;
+    }
+
+    .orbit-two {
+        width: 280px;
+        height: 280px;
+    }
+}
+
+@media (max-width: 680px) {
+    .site-header {
+        min-height: 72px;
+        flex-wrap: wrap;
+    }
+
+    .brand {
+        font-size: 0.78rem;
+        letter-spacing: 1px;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .main-nav {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        padding-bottom: 8px;
+    }
+
+    .main-nav.open {
+        display: flex;
+    }
+
+    .main-nav > a {
+        padding: 12px 5px;
+    }
+
+    .main-nav .nav-cta {
+        text-align: center;
+        margin-top: 8px;
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+        padding: 65px 7% 45px;
+        gap: 5px;
+    }
+
+    h1 {
+        font-size: clamp(2.6rem, 11vw, 3.7rem);
+    }
+
+    .hero-art {
+        min-height: 250px;
+    }
+
+    .diamond-shape {
+        font-size: 11rem;
+    }
+
+    .orbit {
+        width: 200px;
+        height: 200px;
+    }
+
+    .orbit-two {
+        width: 250px;
+        height: 250px;
+    }
+
+    .art-caption {
+        right: 5%;
+    }
+
+    .benefits, .course-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .section {
+        padding: 65px 7%;
+    }
+
+    .hero-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .hero-actions .button {
+        width: 100%;
+    }
+
+    .course-card {
+        padding: 25px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        scroll-behavior: auto !important;
+        transition: none !important;
+    }
+}
