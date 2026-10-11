@@ -1,1 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Diamond English offers practical English
+    lessons for everyday communication, careers and international success.">
 
+    <title>Diamond English | Better English, Brighter Futures</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <script src="{{ url_for('static', filename='js/main.js') }}" defer></script>
+</head>
+
+<body>
+    <header class="site-header">
+        <a href="#home" class="brand" aria-label="Diamond English home">
+            <span class="brand-mark">◇</span>
+            <span>DIAMOND <span class="brand-light">ENGLISH</span></span>
+        </a>
+
+        <button class="menu-toggle" id="menu-toggle"
+                aria-label="Toggle navigation" aria-expanded="false"
+                aria-controls="main-nav">
+            ☰
+        </button>
+
+        <nav id="main-nav" class="main-nav">
+            <a href="#home">Home</a>
+            <a href="#courses">Courses</a>
+            <a href="#about">About</a>
+            <a href="#pricing">Pricing</a>
+            <a href="#contact">Contact</a>
+            <a href="#courses" class="nav-cta">Explore lessons</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero" id="home">
+            <div class="hero-content">
+                <p class="eyebrow">YOUR JOURNEY. YOUR VOICE. YOUR FUTURE.</p>
+
+                <h1>Better English.<br>
+                    <span>Brighter Futures.</span>
+                </h1>
+
+                <p class="hero-description">
+                    Build the confidence to communicate, connect and succeed.
+                    Discover practical English learning designed around your
+                    personal, academic and professional goals.
+                </p>
+
+                <div class="hero-actions">
+                    <a href="#courses" class="button button-gold">
+                        Explore our courses <span>→</span>
+                    </a>
+                    <a href="#about" class="button button-outline">
+                        Discover Diamond English
+                    </a>
+                </div>
+
+                <div class="hero-note">
+                    <span class="note-diamond">✧</span>
+                    English for life, learning and work.
+                </div>
+            </div>
+
+            <div class="hero-art" aria-label="Decorative diamond illustration">
+                <div class="orbit orbit-one"></div>
+                <div class="orbit orbit-two"></div>
+                <div class="diamond-glow"></div>
+                <div class="diamond-shape">◇</div>
+                <div class="art-caption">
+                    <span>GROW YOUR POTENTIAL</span>
+                    <span class="caption-line"></span>
+                </div>
+            </div>
+        </section>
+
+        <section class="intro section" id="about">
+            <p class="eyebrow">WELCOME TO DIAMOND ENGLISH</p>
+            <h2>Your words can open <span>new doors.</span></h2>
+            <p class="section-description">
+                Whether you are developing everyday fluency, preparing for
+                an interview or communicating with international colleagues,
+                we help you turn English knowledge into practical skills.
+            </p>
+
+            <div class="benefits">
+                <article class="benefit">
+                    <span class="benefit-number">01</span>
+                    <h3>Speak with confidence</h3>
+                    <p>Express your ideas naturally in conversations and new situations.</p>
+                </article>
+
+                <article class="benefit">
+                    <span class="benefit-number">02</span>
+                    <h3>Grow professionally</h3>
+                    <p>Strengthen the English you need for meetings, interviews and work.</p>
+                </article>
+
+                <article class="benefit">
+                    <span class="benefit-number">03</span>
+                    <h3>Learn with purpose</h3>
+                    <p>Practise useful language through relevant, goal-focused lessons.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="courses section" id="courses">
+            <p class="eyebrow">FIND YOUR LEARNING PATH</p>
+            <h2>English that works <span>for you.</span></h2>
+            <p class="section-description">
+                Choose a learning path that matches your ambitions.
+            </p>
+
+            <div class="course-grid">
+                <article class="course-card">
+                    <span class="course-icon">✧</span>
+                    <p class="course-label">EVERYDAY COMMUNICATION</p>
+                    <h3>Conversational English</h3>
+                    <p>Improve fluency, vocabulary, listening and confidence in everyday conversations.</p>
+                    <a href="#contact">Discover this course →</a>
+                </article>
+
+                <article class="course-card featured">
+                    <span class="course-icon">◇</span>
+                    <p class="course-label">CAREER DEVELOPMENT</p>
+                    <h3>Business English</h3>
+                    <p>Communicate more effectively in meetings, presentations, emails and interviews.</p>
+                    <a href="#contact">Discover this course →</a>
+                </article>
+
+                <article class="course-card">
+                    <span class="course-icon">⌘</span>
+                    <p class="course-label">ENGLISH FOR TECHNOLOGY</p>
+                    <h3>English for IT</h3>
+                    <p>Practise technical vocabulary, workplace discussions and communication in tech teams.</p>
+                    <a href="#contact">Discover this course →</a>
+                </article>
+
+                <article class="course-card">
+                    <span class="course-icon">✦</span>
+                    <p class="course-label">PERSONAL PREPARATION</p>
+                    <h3>Interview & Exam Prep</h3>
+                    <p>Prepare for important conversations, assessments and your next opportunity.</p>
+                    <a href="#contact">Discover this course →</a>
+                </article>
+            </div>
+        </section>
+
+        <section class="callout section" id="pricing">
+            <p class="eyebrow">YOUR NEXT CHAPTER STARTS HERE</p>
+            <h2>Invest in your <span>voice.</span></h2>
+            <p>Explore lesson options and find a learning plan that suits your goals.</p>
+            <a href="#contact" class="button button-gold">Ask about lesson packages →</a>
+            <p class="small-note">Lesson prices and packages will be published here once finalised.</p>
+        </section>
+
+        <section class="contact section" id="contact">
+            <p class="eyebrow">LET'S START A CONVERSATION</p>
+            <h2>Ready to take the <span>next step?</span></h2>
+            <p class="section-description">
+                Tell us what you would like to achieve in English.
+            </p>
+
+            <form id="enquiry-form" class="enquiry-form">
+                <label for="student-name">Your name</label>
+                <input id="student-name" name="name" type="text"
+                       placeholder="Enter your name" required>
+
+                <label for="student-email">Email address</label>
+                <input id="student-email" name="email" type="email"
+                       placeholder="you@example.com" required>
+
+                <label for="student-goal">What would you like help with?</label>
+                <select id="student-goal" name="goal" required>
+                    <option value="">Choose your learning goal</option>
+                    <option>Conversational English</option>
+                    <option>Business English</option>
+                    <option>English for IT</option>
+                    <option>Interview preparation</option>
+                    <option>Exam preparation</option>
+                    <option>Other</option>
+                </select>
+
+                <label for="student-message">Tell us a little more</label>
+                <textarea id="student-message" name="message" rows="4"
+                          placeholder="Describe your goals (optional)"></textarea>
+
+                <button class="button button-gold" type="submit">
+                    Prepare my enquiry →
+                </button>
+
+                <p id="form-message" class="form-message" role="status"></p>
+            </form>
+            <p class="small-note">
+                This demonstration form does not yet send or save enquiries.
+            </p>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <a href="#home" class="brand">
+            <span class="brand-mark">◇</span>
+            <span>DIAMOND <span class="brand-light">ENGLISH</span></span>
+        </a>
+        <p>Better English. Brighter Futures.</p>
+        <p class="copyright">© <span id="current-year"></span> Diamond English</p>
+    </footer>
+</body>
+</html>
